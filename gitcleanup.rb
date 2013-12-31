@@ -1,16 +1,19 @@
-require "pp"
+require 'pp'
+require 'digest/md5'
 
 git_dir = '/vendor/msysgit/libexec/git-core/'
 working_dir = Dir.pwd
 Dir.chdir(working_dir + git_dir)
-Dir.entries('.').each do |file|
-	if file.end_with?('.exe') and not (file == 'git.exe' or file == 'mergetools' or file.end_with?('.bat'))
-		File.open(File.basename(file, '.*') + '.bat', "w") do |new_file|
-			new_file.write('@' + File.basename(file, '.*').gsub('-',' ') + ' $*')
-		end
-		puts 'Deleting: ' + file
-		File.delete(file)
-		next
-	end
+
+def md5 filename
+	Digest::MD5.hexdigest(File.read(filename))
 end
 
+clone_md5 = md5('git.exe')
+puts 'Md5 of the clones is: ' + clone_md5
+
+Dir.glob('*.exe').each do |file|
+	if file != 'git.exe' and md5(file) == clone_md5
+
+	end
+end
