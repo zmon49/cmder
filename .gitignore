@@ -9,4 +9,7 @@ vendor/*
 config/.history
 Thumbs.db
 *.exe
+<<<<<<< HEAD
 build/
+=======
+>>>>>>> 9939b1ba7f0aa60507fca81c5bf39300b40ba833

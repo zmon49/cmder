@@ -24,19 +24,33 @@ function Delete-Existing ($path) {
 }
 
 function Extract-Archive ($source, $target) {
+<<<<<<< HEAD
     Invoke-Expression "7z x -y -o$($target) $source"
     if ($lastexitcode -ne 0) {
         Write-Error "Extracting of $source failed"
+=======
+    Invoke-Expression "7z x -y -o$($target) $source  > `$null"
+    if ($lastexitcode -ne 0) {
+        Write-Error "Extracting of $source failied"
+>>>>>>> 9939b1ba7f0aa60507fca81c5bf39300b40ba833
     }
     Remove-Item $source
 }
 
 function Create-Archive ($source, $target, $params) {
+<<<<<<< HEAD
     $command = "7z a -t7z -mmt=4 -mx9 -x@`"$source\packignore`" $params $target $source" 
     Write-Verbose "Running: $command"
     Invoke-Expression $command
     if ($lastexitcode -ne 0) {
         Write-Error "Compressing $source failed"
+=======
+    $command = "7z a -x@`"$source\packignore`" $params $target $source  > `$null"
+    Write-Verbose "Running: $command"
+    Invoke-Expression $command
+    if ($lastexitcode -ne 0) {
+        Write-Error "Compressing $source failied"
+>>>>>>> 9939b1ba7f0aa60507fca81c5bf39300b40ba833
     }
 }
 
