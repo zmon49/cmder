@@ -39,15 +39,10 @@ Param(
 $ErrorActionPreference = "Stop"
 
 $targets = @{
-<<<<<<< HEAD
     "cmder_mini.7z" = "-x!`"vendor\msysgit`"";
 	"cmder.7z" = $null;
     
-=======
-    "cmder.zip" = $null;
-    "cmder.7z" = $null;
-    "cmder_mini.zip" = "-x!`"vendor\msysgit`"";
->>>>>>> 9939b1ba7f0aa60507fca81c5bf39300b40ba833
+
 }
 
 Delete-Existing "..\Version*"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-01-21 18:36:36" build="131215">
+		<key name=".Vanilla" modified="2014-05-18 10:52:59" build="140404">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -123,12 +123,12 @@
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="0000006f"/>
-			<value name="ConWnd Height" type="dword" data="0000001a"/>
+			<value name="WindowMode" type="dword" data="00000520"/>
+			<value name="ConWnd Width" type="dword" data="00000021"/>
+			<value name="ConWnd Height" type="dword" data="0000002b"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="000000bc"/>
-			<value name="ConWnd Y" type="dword" data="00000065"/>
+			<value name="ConWnd X" type="dword" data="00000043"/>
+			<value name="ConWnd Y" type="dword" data="00000000"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -349,7 +349,7 @@
 			<value name="SwitchGuiFocus" type="dword" data="00000000"/>
 			<value name="SetFocusGui" type="dword" data="00000000"/>
 			<value name="SetFocusChild" type="dword" data="00000000"/>
-			<value name="ChildSystemMenu" type="dword" data="006b2d288000000"/>
+			<value name="ChildSystemMenu" type="dword" data="ffffffff"/>
 			<value name="Multi.NewConsole" type="dword" data="80808000"/>
 			<value name="Multi.NewConsoleShift" type="dword" data="00001154"/>
 			<value name="Multi.NewConsolePopup" type="dword" data="80808000"/>
@@ -483,9 +483,9 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2014-01-21 18:36:36" build="131215">
+				<key name="Tasks" modified="2014-05-18 10:53:00" build="140404">
 				<value name="Count" type="dword" data="00000002"/>
-						<key name="Task1" modified="2014-01-21 18:36:36" build="131215">
+						<key name="Task1" modified="2014-05-18 10:53:00" build="140404">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;%CMDER_ROOT%\cmder.exe&quot;"/>
 					<value name="Cmd1" type="string" data="cmd /k &quot;%CMDER_ROOT%\vendor\init.bat&quot;  -new_console:d:%USERPROFILE%"/>
@@ -493,20 +493,21 @@
 					<value name="Count" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 				</key>
-						<key name="Task2" modified="2014-01-21 18:36:36" build="131215">
+						<key name="Task2" modified="2014-05-18 10:53:00" build="140404">
 					<value name="Name" type="string" data="{PowerShell}"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;%userprofile%&quot;"/>
-					<value name="Cmd1" type="string" data="powershell"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="powershell -NoProfile -noexit -command &quot;Vendor/profile.ps1&quot;"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="Cmd2" type="string" data="$env:cmder_root\vendor\profile.psc1 -noexit "/>
 				</key>
 			</key>
-				<key name="Apps" modified="2014-01-21 18:36:36" build="131215">
+				<key name="Apps" modified="2014-05-18 10:53:00" build="140404">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2014-01-21 18:36:36" build="131215">
-			<key name="Palette1" modified="2014-01-21 18:36:36" build="131215">
+			<key name="Colors" modified="2014-05-18 10:53:00" build="140404">
+			<key name="Palette1" modified="2014-05-18 10:53:00" build="140404">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -581,6 +582,12 @@
 			<value name="TransparencyDec" type="dword" data="00000000"/>
 			<value name="Key.MaximizeWidth" type="dword" data="00000000"/>
 			<value name="Key.MaximizeHeight" type="dword" data="00000000"/>
+			<value name="DefaultTerminalNewWindow" type="hex" data="00"/>
+			<value name="CTS.Intelligent" type="hex" data="01"/>
+			<value name="CTS.IntelligentExceptions" type="string" data="far|vim.exe"/>
+			<value name="StatusBar.Hide.Time" type="hex" data="01"/>
+			<value name="TaskbarProgress" type="hex" data="01"/>
+			<value name="RetardInactivePanes" type="hex" data="00"/>
 		</key>
 	</key>
 </key>

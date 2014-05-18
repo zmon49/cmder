@@ -53,11 +53,9 @@ Ensure-Executable "7z"
 
 foreach ($s in $sources) {
     Write-Verbose "Getting $($s.name) from URL $($s.url)"
-<<<<<<< HEAD
-	Write-Host "Updating $($s.name)"
-=======
 
->>>>>>> 9939b1ba7f0aa60507fca81c5bf39300b40ba833
+	Write-Host "Updating $($s.name)"
+
     # We do not care about the extensions/type of archive
     $tempArchive = "$($s.name).tmp"
     Delete-Existing $tempArchive
@@ -72,9 +70,8 @@ foreach ($s in $sources) {
 }
 
 Pop-Location
-<<<<<<< HEAD
+
 Write-Verbose "All good and done!"
 Write-Host "Complete."
-=======
+
 Write-Verbose "All good and done!"
->>>>>>> 9939b1ba7f0aa60507fca81c5bf39300b40ba833
